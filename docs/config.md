@@ -53,7 +53,7 @@ Recommended for **other languages** projects (js, go, etc).
         ["disabled", "fg:#858585 italic"]
         ]
 
-The extra tab before the square brakets (`]`) at the end is required.
+The extra tab before the square brackets (`]`) at the end is required.
 
 ## Settings
 

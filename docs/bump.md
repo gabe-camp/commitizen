@@ -4,7 +4,7 @@
 
 The version is bumped **automatically** based on the commits.
 
-The commits should follow the rules of the commiter in order to be parsed properly.
+The commits should follow the rules of the committer in order to be parsed properly.
 
 It is possible to specify a **prerelease** (alpha, beta, release candidate) version.
 
@@ -62,7 +62,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --dry-run             show output to stdout, no commit, no modified files
   --tag-format TAG_FORMAT
-                        format used to tag the commmit and read it, use it in
+                        format used to tag the commit and read it, use it in
                         existing projects, wrap around simple quotes.
   --prerelease {alpha,beta,rc}, -pr {alpha,beta,rc}
                         choose type of prerelease

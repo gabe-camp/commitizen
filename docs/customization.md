@@ -106,7 +106,7 @@ You need to define 2 parameters inside `BaseCommitizen`.
 | `bump_pattern` | `str` | `None` | Regex to extract information from commit (subject and body) |
 | `bump_map` | `dict` | `None` | Dictionary mapping the extracted information to a `SemVer` increment type (`MAJOR`, `MINOR`, `PATCH`) |
 
-Let's see an exampple
+Let's see an example
 
 ```python
 from commitizen.cz.base import BaseCommitizen
@@ -127,7 +127,7 @@ cz -n cz_strange bump
 
 ### Raise Customize Exception
 
-If you wannt `commitizen` to catch your exception and print the message, you'll have to inherit `CzException`.
+If you want `commitizen` to catch your exception and print the message, you'll have to inherit `CzException`.
 
 ```python
 from commitizen.cz.exception import CzException
@@ -141,7 +141,7 @@ class NoSubjectProvidedException(CzException):
 **This is only supported when configuring through `toml` (e.g., `pyproject.toml`, `.cz`, and `.cz.toml`)**
 
 The basic steps are:
-1. Define your custom committing or bumpping rules in the configuration file.
+1. Define your custom committing or bumping rules in the configuration file.
 2. Declare `name = "cz_customize"` in your configuration file, or add `-n cz_customize` when running commitizen.
 
 Example:
@@ -152,7 +152,7 @@ name = "cz_customize"
 
 [tool.commitizen.customize]
 message_template = "{change_type}: {message}"
-example = "feature: this feature eanable customize through config file"
+example = "feature: this feature enables customize through config file"
 schema = "<type>: <body>"
 bump_pattern = "^(break|new|fix|hotfix)"
 bump_map = {"break" = "MAJOR", "new" = "MINOR", "fix" = "PATCH", "hotfix" = "PATCH"}
@@ -177,7 +177,7 @@ message = "Body."
 
 | Parameter | Type | Default | Description |
 | --------- | ---- | ------- | ----------- |
-| `question` | `dict` | `None` | Questions regarding the commit message. Detatiled below. |
+| `question` | `dict` | `None` | Questions regarding the commit message. Detailed below. |
 | `message_template` | `str` | `None` | The template for generating message from the given answers. `message_template` should follow the python string formatting specification, and all the variables in this template should be defined in `name` in `questions`. |
 | `example` | `str` | `None` | (OPTIONAL) Provide an example to help understand the style. Used by `cz example`. |
 | `schema` | `str` | `None` | (OPTIONAL) Show the schema used. Used by `cz schema`. |
